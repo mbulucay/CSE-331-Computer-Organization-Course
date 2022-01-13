@@ -1,0 +1,119 @@
+Restore Archived Project report for project03
+Sun Jan 09 17:42:12 2022
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Restore Archived Project Summary
+  3. Restore Archived Project Messages
+  4. Files Restored
+  5. Files Not Restored
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; Restore Archived Project Summary                                        ;
++---------------------------------+---------------------------------------+
+; Restore Archived Project Status ; Successful - Sun Jan 09 17:42:12 2022 ;
+; Revision Name                   ; project03                             ;
+; Top-level Entity Name           ; MiniMIPS                              ;
+; Family                          ; Cyclone III                           ;
++---------------------------------+---------------------------------------+
+
+
++-----------------------------------+
+; Restore Archived Project Messages ;
++-----------------------------------+
+Info: Successfully restored 'C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/teslim/1901042697/1901042697.qar' into the 'C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/teslim/1901042697/1901042697_restored/' directory
+Info: Generated report 'project03.restore.rpt'
+Info (23030): Evaluation of Tcl script c:/altera/13.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus II 64-Bit Shell was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4482 megabytes
+    Info: Processing ended: Sun Jan 09 17:42:13 2022
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:01
+
+
++------------------------------------------------------+
+; Files Restored                                       ;
++------------------------------------------------------+
+; File Name                                            ;
++------------------------------------------------------+
+; ALU.v                                                ;
+; MiniMIPS.v                                           ;
+; MiniMIPS_testbench.v                                 ;
+; alu_32bit.v                                          ;
+; alu_32bit_testbench.v                                ;
+; alu_control.v                                        ;
+; alu_control_testbench.v                              ;
+; assignment_defaults.qdf                              ;
+; branch_module.v                                      ;
+; branch_module_testbrench.v                           ;
+; db/project03.db_info                                 ;
+; incremental_db/compiled_partitions/project03.db_info ;
+; instruction_decode.v                                 ;
+; instruction_decode_testbrench.v                      ;
+; instruction_memory.v                                 ;
+; instruction_memory_testbench.v                       ;
+; main_control.v                                       ;
+; main_control_testbench.v                             ;
+; mips_memory.v                                        ;
+; mips_memory_testbench.v                              ;
+; mips_registers.v                                     ;
+; mips_registers_testbench.v                           ;
+; mostALU.v                                            ;
+; mux_2x1.v                                            ;
+; mux_2x1_32bit.v                                      ;
+; mux_2x1_32bit_testbech.v                             ;
+; mux_2x1_testbench.v                                  ;
+; mux_4x1.v                                            ;
+; mux_4x1_testbench.v                                  ;
+; mux_8x1.v                                            ;
+; mux_8x1_testbench.v                                  ;
+; onebitALU.v                                          ;
+; onebitALU_testbench.v                                ;
+; project03.qpf                                        ;
+; project03.qsf                                        ;
+; register_testbench2.v                                ;
+; shiftLeft2.v                                         ;
+; signExtend.v                                         ;
+; signExtend_testbench.v                               ;
+; simulation/modelsim/data.txt                         ;
+; simulation/modelsim/instructionList.txt              ;
+; simulation/modelsim/registers.mem                    ;
+; twoBitALU.v                                          ;
+; twoBitALU_testbench.v                                ;
+; zero_extend.v                                        ;
+; zero_extend_testbrench.v                             ;
++------------------------------------------------------+
+
+
++--------------------+
+; Files Not Restored ;
++--------------------+
+; File Name          ;
++--------------------+
+
+

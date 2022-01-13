@@ -1,0 +1,1139 @@
+Analysis & Synthesis report for project03
+Sun Jan 09 17:43:26 2022
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. User-Specified and Inferred Latches
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Registers Packed Into Inferred Megafunctions
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Source assignments for instruction_memory:InstMem|altsyncram:instructions_rtl_0|altsyncram_ca81:auto_generated
+ 15. Parameter Settings for Inferred Entity Instance: instruction_memory:InstMem|altsyncram:instructions_rtl_0
+ 16. altsyncram Parameter Settings by Entity Instance
+ 17. Port Connectivity Checks: "branch_module:Branch|alu_32bit:MyAlu"
+ 18. Port Connectivity Checks: "branch_module:Branch|alu_32bit:MyAlu2"
+ 19. Port Connectivity Checks: "alu_32bit:ALU|mostALU:bit_31|mux_8x1:Result"
+ 20. Port Connectivity Checks: "alu_32bit:ALU|ALU:bit_0|mux_8x1:Result"
+ 21. Port Connectivity Checks: "alu_32bit:ALU"
+ 22. Elapsed Time Per Partition
+ 23. Analysis & Synthesis Messages
+ 24. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                    ;
++------------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sun Jan 09 17:43:26 2022      ;
+; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name                      ; project03                                  ;
+; Top-level Entity Name              ; MiniMIPS                                   ;
+; Family                             ; Cyclone III                                ;
+; Total logic elements               ; 14,982                                     ;
+;     Total combinational functions  ; 7,340                                      ;
+;     Dedicated logic registers      ; 8,416                                      ;
+; Total registers                    ; 8416                                       ;
+; Total pins                         ; 97                                         ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 4,096                                      ;
+; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total PLLs                         ; 0                                          ;
++------------------------------------+--------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP3C16F484C6       ;                    ;
+; Top-level entity name                                                      ; MiniMIPS           ; project03          ;
+; Family name                                                                ; Cyclone III        ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ; < 0.1%      ;
+;     Processors 5-8         ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                                   ;
++-------------------------------------------------------+-----------------+-------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                      ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                                                                                 ; Library ;
++-------------------------------------------------------+-----------------+-------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; MiniMIPS.v                                            ; yes             ; User Verilog HDL File                                 ; C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/teslim/1901042697/1901042697_restored/MiniMIPS.v                                            ;         ;
+; simulation/modelsim/data.txt                          ; yes             ; User File                                             ; C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/teslim/1901042697/1901042697_restored/simulation/modelsim/data.txt                          ;         ;
+; simulation/modelsim/registers.mem                     ; yes             ; User Unspecified File                                 ; C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/teslim/1901042697/1901042697_restored/simulation/modelsim/registers.mem                     ;         ;
+; mips_registers.v                                      ; yes             ; User Verilog HDL File                                 ; C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/teslim/1901042697/1901042697_restored/mips_registers.v                                      ;         ;
+; main_control.v                                        ; yes             ; User Verilog HDL File                                 ; C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/teslim/1901042697/1901042697_restored/main_control.v                                        ;         ;
+; alu_control.v                                         ; yes             ; User Verilog HDL File                                 ; C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/teslim/1901042697/1901042697_restored/alu_control.v                                         ;         ;
+; mux_2x1.v                                             ; yes             ; User Verilog HDL File                                 ; C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/teslim/1901042697/1901042697_restored/mux_2x1.v                                             ;         ;
+; mux_4x1.v                                             ; yes             ; User Verilog HDL File                                 ; C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/teslim/1901042697/1901042697_restored/mux_4x1.v                                             ;         ;
+; mux_8x1.v                                             ; yes             ; User Verilog HDL File                                 ; C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/teslim/1901042697/1901042697_restored/mux_8x1.v                                             ;         ;
+; ALU.v                                                 ; yes             ; User Verilog HDL File                                 ; C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/teslim/1901042697/1901042697_restored/ALU.v                                                 ;         ;
+; mostALU.v                                             ; yes             ; User Verilog HDL File                                 ; C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/teslim/1901042697/1901042697_restored/mostALU.v                                             ;         ;
+; alu_32bit.v                                           ; yes             ; User Verilog HDL File                                 ; C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/teslim/1901042697/1901042697_restored/alu_32bit.v                                           ;         ;
+; signExtend.v                                          ; yes             ; User Verilog HDL File                                 ; C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/teslim/1901042697/1901042697_restored/signExtend.v                                          ;         ;
+; mips_memory.v                                         ; yes             ; User Verilog HDL File                                 ; C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/teslim/1901042697/1901042697_restored/mips_memory.v                                         ;         ;
+; mux_2x1_32bit.v                                       ; yes             ; User Verilog HDL File                                 ; C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/teslim/1901042697/1901042697_restored/mux_2x1_32bit.v                                       ;         ;
+; instruction_memory.v                                  ; yes             ; User Verilog HDL File                                 ; C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/teslim/1901042697/1901042697_restored/instruction_memory.v                                  ;         ;
+; simulation/modelsim/instructionList.txt               ; yes             ; User File                                             ; C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/teslim/1901042697/1901042697_restored/simulation/modelsim/instructionList.txt               ;         ;
+; zero_extend.v                                         ; yes             ; User Verilog HDL File                                 ; C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/teslim/1901042697/1901042697_restored/zero_extend.v                                         ;         ;
+; instruction_decode.v                                  ; yes             ; User Verilog HDL File                                 ; C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/teslim/1901042697/1901042697_restored/instruction_decode.v                                  ;         ;
+; branch_module.v                                       ; yes             ; User Verilog HDL File                                 ; C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/teslim/1901042697/1901042697_restored/branch_module.v                                       ;         ;
+; altsyncram.tdf                                        ; yes             ; Megafunction                                          ; c:/altera/13.1/quartus/libraries/megafunctions/altsyncram.tdf                                                                                ;         ;
+; stratix_ram_block.inc                                 ; yes             ; Megafunction                                          ; c:/altera/13.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                                                         ;         ;
+; lpm_mux.inc                                           ; yes             ; Megafunction                                          ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_mux.inc                                                                                   ;         ;
+; lpm_decode.inc                                        ; yes             ; Megafunction                                          ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_decode.inc                                                                                ;         ;
+; aglobal131.inc                                        ; yes             ; Megafunction                                          ; c:/altera/13.1/quartus/libraries/megafunctions/aglobal131.inc                                                                                ;         ;
+; a_rdenreg.inc                                         ; yes             ; Megafunction                                          ; c:/altera/13.1/quartus/libraries/megafunctions/a_rdenreg.inc                                                                                 ;         ;
+; altrom.inc                                            ; yes             ; Megafunction                                          ; c:/altera/13.1/quartus/libraries/megafunctions/altrom.inc                                                                                    ;         ;
+; altram.inc                                            ; yes             ; Megafunction                                          ; c:/altera/13.1/quartus/libraries/megafunctions/altram.inc                                                                                    ;         ;
+; altdpram.inc                                          ; yes             ; Megafunction                                          ; c:/altera/13.1/quartus/libraries/megafunctions/altdpram.inc                                                                                  ;         ;
+; db/altsyncram_ca81.tdf                                ; yes             ; Auto-Generated Megafunction                           ; C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/teslim/1901042697/1901042697_restored/db/altsyncram_ca81.tdf                                ;         ;
+; db/project03.ram0_instruction_memory_68fd8bb8.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/teslim/1901042697/1901042697_restored/db/project03.ram0_instruction_memory_68fd8bb8.hdl.mif ;         ;
++-------------------------------------------------------+-----------------+-------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 14,982    ;
+;                                             ;           ;
+; Total combinational functions               ; 7340      ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 6263      ;
+;     -- 3 input functions                    ; 354       ;
+;     -- <=2 input functions                  ; 723       ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 7340      ;
+;     -- arithmetic mode                      ; 0         ;
+;                                             ;           ;
+; Total registers                             ; 8416      ;
+;     -- Dedicated logic registers            ; 8416      ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 97        ;
+; Total memory bits                           ; 4096      ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 8432      ;
+; Total fan-out                               ; 52403     ;
+; Average fan-out                             ; 3.28      ;
++---------------------------------------------+-----------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                      ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                               ; Library Name ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------+--------------+
+; |MiniMIPS                                 ; 7340 (0)          ; 8416 (0)     ; 4096        ; 0            ; 0       ; 0         ; 97   ; 0            ; |MiniMIPS                                                                                         ; work         ;
+;    |alu_32bit:ALU|                        ; 340 (8)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU                                                                           ; work         ;
+;       |ALU:bit_0|                         ; 12 (3)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_0                                                                 ; work         ;
+;          |mux_8x1:Result|                 ; 9 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_0|mux_8x1:Result                                                  ; work         ;
+;             |mux_2x1:myMux|               ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_0|mux_8x1:Result|mux_2x1:myMux                                    ; work         ;
+;             |mux_4x1:myMux2|              ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_0|mux_8x1:Result|mux_4x1:myMux2                                   ; work         ;
+;                |mux_2x1:mux_2|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_0|mux_8x1:Result|mux_4x1:myMux2|mux_2x1:mux_2                     ; work         ;
+;       |ALU:bit_10|                        ; 9 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_10                                                                ; work         ;
+;          |mux_8x1:Result|                 ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_10|mux_8x1:Result                                                 ; work         ;
+;             |mux_2x1:myMux|               ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_10|mux_8x1:Result|mux_2x1:myMux                                   ; work         ;
+;             |mux_4x1:myMux2|              ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_10|mux_8x1:Result|mux_4x1:myMux2                                  ; work         ;
+;                |mux_2x1:mux_2|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_10|mux_8x1:Result|mux_4x1:myMux2|mux_2x1:mux_2                    ; work         ;
+;       |ALU:bit_11|                        ; 11 (6)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_11                                                                ; work         ;
+;          |mux_8x1:Result|                 ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_11|mux_8x1:Result                                                 ; work         ;
+;             |mux_2x1:myMux|               ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_11|mux_8x1:Result|mux_2x1:myMux                                   ; work         ;
+;             |mux_4x1:myMux2|              ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_11|mux_8x1:Result|mux_4x1:myMux2                                  ; work         ;
+;                |mux_2x1:mux_1|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_11|mux_8x1:Result|mux_4x1:myMux2|mux_2x1:mux_1                    ; work         ;
+;                |mux_2x1:mux_2|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_11|mux_8x1:Result|mux_4x1:myMux2|mux_2x1:mux_2                    ; work         ;
+;       |ALU:bit_12|                        ; 9 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_12                                                                ; work         ;
+;          |mux_8x1:Result|                 ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_12|mux_8x1:Result                                                 ; work         ;
+;             |mux_2x1:myMux|               ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_12|mux_8x1:Result|mux_2x1:myMux                                   ; work         ;
+;             |mux_4x1:myMux2|              ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_12|mux_8x1:Result|mux_4x1:myMux2                                  ; work         ;
+;                |mux_2x1:mux_2|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_12|mux_8x1:Result|mux_4x1:myMux2|mux_2x1:mux_2                    ; work         ;
+;       |ALU:bit_13|                        ; 8 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_13                                                                ; work         ;
+;          |mux_8x1:Result|                 ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_13|mux_8x1:Result                                                 ; work         ;
+;             |mux_2x1:myMux|               ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_13|mux_8x1:Result|mux_2x1:myMux                                   ; work         ;
+;             |mux_4x1:myMux2|              ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_13|mux_8x1:Result|mux_4x1:myMux2                                  ; work         ;
+;                |mux_2x1:mux_1|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_13|mux_8x1:Result|mux_4x1:myMux2|mux_2x1:mux_1                    ; work         ;
+;                |mux_2x1:mux_2|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_13|mux_8x1:Result|mux_4x1:myMux2|mux_2x1:mux_2                    ; work         ;
+;       |ALU:bit_14|                        ; 9 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_14                                                                ; work         ;
+;          |mux_8x1:Result|                 ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_14|mux_8x1:Result                                                 ; work         ;
+;             |mux_2x1:myMux|               ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_14|mux_8x1:Result|mux_2x1:myMux                                   ; work         ;
+;             |mux_4x1:myMux2|              ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_14|mux_8x1:Result|mux_4x1:myMux2                                  ; work         ;
+;                |mux_2x1:mux_2|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_14|mux_8x1:Result|mux_4x1:myMux2|mux_2x1:mux_2                    ; work         ;
+;       |ALU:bit_15|                        ; 11 (6)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_15                                                                ; work         ;
+;          |mux_8x1:Result|                 ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_15|mux_8x1:Result                                                 ; work         ;
+;             |mux_2x1:myMux|               ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_15|mux_8x1:Result|mux_2x1:myMux                                   ; work         ;
+;             |mux_4x1:myMux2|              ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_15|mux_8x1:Result|mux_4x1:myMux2                                  ; work         ;
+;                |mux_2x1:mux_1|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_15|mux_8x1:Result|mux_4x1:myMux2|mux_2x1:mux_1                    ; work         ;
+;                |mux_2x1:mux_2|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_15|mux_8x1:Result|mux_4x1:myMux2|mux_2x1:mux_2                    ; work         ;
+;       |ALU:bit_16|                        ; 9 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_16                                                                ; work         ;
+;          |mux_8x1:Result|                 ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_16|mux_8x1:Result                                                 ; work         ;
+;             |mux_2x1:myMux|               ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_16|mux_8x1:Result|mux_2x1:myMux                                   ; work         ;
+;             |mux_4x1:myMux2|              ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_16|mux_8x1:Result|mux_4x1:myMux2                                  ; work         ;
+;                |mux_2x1:mux_2|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_16|mux_8x1:Result|mux_4x1:myMux2|mux_2x1:mux_2                    ; work         ;
+;       |ALU:bit_17|                        ; 8 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_17                                                                ; work         ;
+;          |mux_8x1:Result|                 ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_17|mux_8x1:Result                                                 ; work         ;
+;             |mux_2x1:myMux|               ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_17|mux_8x1:Result|mux_2x1:myMux                                   ; work         ;
+;             |mux_4x1:myMux2|              ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_17|mux_8x1:Result|mux_4x1:myMux2                                  ; work         ;
+;                |mux_2x1:mux_1|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_17|mux_8x1:Result|mux_4x1:myMux2|mux_2x1:mux_1                    ; work         ;
+;                |mux_2x1:mux_2|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_17|mux_8x1:Result|mux_4x1:myMux2|mux_2x1:mux_2                    ; work         ;
+;       |ALU:bit_18|                        ; 8 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_18                                                                ; work         ;
+;          |mux_8x1:Result|                 ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_18|mux_8x1:Result                                                 ; work         ;
+;             |mux_2x1:myMux|               ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_18|mux_8x1:Result|mux_2x1:myMux                                   ; work         ;
+;             |mux_4x1:myMux2|              ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_18|mux_8x1:Result|mux_4x1:myMux2                                  ; work         ;
+;                |mux_2x1:mux_2|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_18|mux_8x1:Result|mux_4x1:myMux2|mux_2x1:mux_2                    ; work         ;
+;       |ALU:bit_19|                        ; 12 (7)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_19                                                                ; work         ;
+;          |mux_8x1:Result|                 ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_19|mux_8x1:Result                                                 ; work         ;
+;             |mux_2x1:myMux|               ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_19|mux_8x1:Result|mux_2x1:myMux                                   ; work         ;
+;             |mux_4x1:myMux2|              ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_19|mux_8x1:Result|mux_4x1:myMux2                                  ; work         ;
+;                |mux_2x1:mux_1|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_19|mux_8x1:Result|mux_4x1:myMux2|mux_2x1:mux_1                    ; work         ;
+;                |mux_2x1:mux_2|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_19|mux_8x1:Result|mux_4x1:myMux2|mux_2x1:mux_2                    ; work         ;
+;       |ALU:bit_1|                         ; 16 (4)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_1                                                                 ; work         ;
+;          |mux_8x1:Result|                 ; 12 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_1|mux_8x1:Result                                                  ; work         ;
+;             |mux_2x1:myMux|               ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_1|mux_8x1:Result|mux_2x1:myMux                                    ; work         ;
+;             |mux_4x1:myMux2|              ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_1|mux_8x1:Result|mux_4x1:myMux2                                   ; work         ;
+;                |mux_2x1:mux_1|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_1|mux_8x1:Result|mux_4x1:myMux2|mux_2x1:mux_1                     ; work         ;
+;                |mux_2x1:mux_2|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_1|mux_8x1:Result|mux_4x1:myMux2|mux_2x1:mux_2                     ; work         ;
+;       |ALU:bit_20|                        ; 9 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_20                                                                ; work         ;
+;          |mux_8x1:Result|                 ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_20|mux_8x1:Result                                                 ; work         ;
+;             |mux_2x1:myMux|               ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_20|mux_8x1:Result|mux_2x1:myMux                                   ; work         ;
+;             |mux_4x1:myMux2|              ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_20|mux_8x1:Result|mux_4x1:myMux2                                  ; work         ;
+;                |mux_2x1:mux_2|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_20|mux_8x1:Result|mux_4x1:myMux2|mux_2x1:mux_2                    ; work         ;
+;       |ALU:bit_21|                        ; 8 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_21                                                                ; work         ;
+;          |mux_8x1:Result|                 ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_21|mux_8x1:Result                                                 ; work         ;
+;             |mux_2x1:myMux|               ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_21|mux_8x1:Result|mux_2x1:myMux                                   ; work         ;
+;             |mux_4x1:myMux2|              ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_21|mux_8x1:Result|mux_4x1:myMux2                                  ; work         ;
+;                |mux_2x1:mux_1|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_21|mux_8x1:Result|mux_4x1:myMux2|mux_2x1:mux_1                    ; work         ;
+;                |mux_2x1:mux_2|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_21|mux_8x1:Result|mux_4x1:myMux2|mux_2x1:mux_2                    ; work         ;
+;       |ALU:bit_22|                        ; 8 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_22                                                                ; work         ;
+;          |mux_8x1:Result|                 ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_22|mux_8x1:Result                                                 ; work         ;
+;             |mux_2x1:myMux|               ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_22|mux_8x1:Result|mux_2x1:myMux                                   ; work         ;
+;             |mux_4x1:myMux2|              ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_22|mux_8x1:Result|mux_4x1:myMux2                                  ; work         ;
+;                |mux_2x1:mux_2|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_22|mux_8x1:Result|mux_4x1:myMux2|mux_2x1:mux_2                    ; work         ;
+;       |ALU:bit_23|                        ; 11 (6)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_23                                                                ; work         ;
+;          |mux_8x1:Result|                 ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_23|mux_8x1:Result                                                 ; work         ;
+;             |mux_2x1:myMux|               ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_23|mux_8x1:Result|mux_2x1:myMux                                   ; work         ;
+;             |mux_4x1:myMux2|              ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_23|mux_8x1:Result|mux_4x1:myMux2                                  ; work         ;
+;                |mux_2x1:mux_1|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_23|mux_8x1:Result|mux_4x1:myMux2|mux_2x1:mux_1                    ; work         ;
+;                |mux_2x1:mux_2|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_23|mux_8x1:Result|mux_4x1:myMux2|mux_2x1:mux_2                    ; work         ;
+;       |ALU:bit_24|                        ; 9 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_24                                                                ; work         ;
+;          |mux_8x1:Result|                 ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_24|mux_8x1:Result                                                 ; work         ;
+;             |mux_2x1:myMux|               ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_24|mux_8x1:Result|mux_2x1:myMux                                   ; work         ;
+;             |mux_4x1:myMux2|              ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_24|mux_8x1:Result|mux_4x1:myMux2                                  ; work         ;
+;                |mux_2x1:mux_2|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_24|mux_8x1:Result|mux_4x1:myMux2|mux_2x1:mux_2                    ; work         ;
+;       |ALU:bit_25|                        ; 8 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_25                                                                ; work         ;
+;          |mux_8x1:Result|                 ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_25|mux_8x1:Result                                                 ; work         ;
+;             |mux_2x1:myMux|               ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_25|mux_8x1:Result|mux_2x1:myMux                                   ; work         ;
+;             |mux_4x1:myMux2|              ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_25|mux_8x1:Result|mux_4x1:myMux2                                  ; work         ;
+;                |mux_2x1:mux_2|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_25|mux_8x1:Result|mux_4x1:myMux2|mux_2x1:mux_2                    ; work         ;
+;       |ALU:bit_26|                        ; 11 (5)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_26                                                                ; work         ;
+;          |mux_8x1:Result|                 ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_26|mux_8x1:Result                                                 ; work         ;
+;             |mux_2x1:myMux|               ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_26|mux_8x1:Result|mux_2x1:myMux                                   ; work         ;
+;             |mux_4x1:myMux2|              ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_26|mux_8x1:Result|mux_4x1:myMux2                                  ; work         ;
+;                |mux_2x1:mux_2|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_26|mux_8x1:Result|mux_4x1:myMux2|mux_2x1:mux_2                    ; work         ;
+;       |ALU:bit_27|                        ; 9 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_27                                                                ; work         ;
+;          |mux_8x1:Result|                 ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_27|mux_8x1:Result                                                 ; work         ;
+;             |mux_2x1:myMux|               ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_27|mux_8x1:Result|mux_2x1:myMux                                   ; work         ;
+;             |mux_4x1:myMux2|              ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_27|mux_8x1:Result|mux_4x1:myMux2                                  ; work         ;
+;                |mux_2x1:mux_1|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_27|mux_8x1:Result|mux_4x1:myMux2|mux_2x1:mux_1                    ; work         ;
+;                |mux_2x1:mux_2|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_27|mux_8x1:Result|mux_4x1:myMux2|mux_2x1:mux_2                    ; work         ;
+;       |ALU:bit_28|                        ; 8 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_28                                                                ; work         ;
+;          |mux_8x1:Result|                 ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_28|mux_8x1:Result                                                 ; work         ;
+;             |mux_2x1:myMux|               ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_28|mux_8x1:Result|mux_2x1:myMux                                   ; work         ;
+;             |mux_4x1:myMux2|              ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_28|mux_8x1:Result|mux_4x1:myMux2                                  ; work         ;
+;                |mux_2x1:mux_2|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_28|mux_8x1:Result|mux_4x1:myMux2|mux_2x1:mux_2                    ; work         ;
+;       |ALU:bit_29|                        ; 9 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_29                                                                ; work         ;
+;          |mux_8x1:Result|                 ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_29|mux_8x1:Result                                                 ; work         ;
+;             |mux_2x1:myMux|               ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_29|mux_8x1:Result|mux_2x1:myMux                                   ; work         ;
+;             |mux_4x1:myMux2|              ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_29|mux_8x1:Result|mux_4x1:myMux2                                  ; work         ;
+;                |mux_2x1:mux_1|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_29|mux_8x1:Result|mux_4x1:myMux2|mux_2x1:mux_1                    ; work         ;
+;                |mux_2x1:mux_2|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_29|mux_8x1:Result|mux_4x1:myMux2|mux_2x1:mux_2                    ; work         ;
+;       |ALU:bit_2|                         ; 13 (3)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_2                                                                 ; work         ;
+;          |mux_8x1:Result|                 ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_2|mux_8x1:Result                                                  ; work         ;
+;             |mux_2x1:myMux|               ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_2|mux_8x1:Result|mux_2x1:myMux                                    ; work         ;
+;             |mux_4x1:myMux2|              ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_2|mux_8x1:Result|mux_4x1:myMux2                                   ; work         ;
+;                |mux_2x1:mux_2|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_2|mux_8x1:Result|mux_4x1:myMux2|mux_2x1:mux_2                     ; work         ;
+;       |ALU:bit_30|                        ; 11 (4)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_30                                                                ; work         ;
+;          |mux_8x1:Result|                 ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_30|mux_8x1:Result                                                 ; work         ;
+;             |mux_2x1:myMux|               ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_30|mux_8x1:Result|mux_2x1:myMux                                   ; work         ;
+;             |mux_4x1:myMux2|              ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_30|mux_8x1:Result|mux_4x1:myMux2                                  ; work         ;
+;                |mux_2x1:mux_2|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_30|mux_8x1:Result|mux_4x1:myMux2|mux_2x1:mux_2                    ; work         ;
+;       |ALU:bit_3|                         ; 14 (6)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_3                                                                 ; work         ;
+;          |mux_8x1:Result|                 ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_3|mux_8x1:Result                                                  ; work         ;
+;             |mux_2x1:myMux|               ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_3|mux_8x1:Result|mux_2x1:myMux                                    ; work         ;
+;             |mux_4x1:myMux2|              ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_3|mux_8x1:Result|mux_4x1:myMux2                                   ; work         ;
+;                |mux_2x1:mux_1|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_3|mux_8x1:Result|mux_4x1:myMux2|mux_2x1:mux_1                     ; work         ;
+;                |mux_2x1:mux_2|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_3|mux_8x1:Result|mux_4x1:myMux2|mux_2x1:mux_2                     ; work         ;
+;       |ALU:bit_4|                         ; 13 (3)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_4                                                                 ; work         ;
+;          |mux_8x1:Result|                 ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_4|mux_8x1:Result                                                  ; work         ;
+;             |mux_2x1:myMux|               ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_4|mux_8x1:Result|mux_2x1:myMux                                    ; work         ;
+;             |mux_4x1:myMux2|              ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_4|mux_8x1:Result|mux_4x1:myMux2                                   ; work         ;
+;                |mux_2x1:mux_2|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_4|mux_8x1:Result|mux_4x1:myMux2|mux_2x1:mux_2                     ; work         ;
+;       |ALU:bit_5|                         ; 12 (4)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_5                                                                 ; work         ;
+;          |mux_8x1:Result|                 ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_5|mux_8x1:Result                                                  ; work         ;
+;             |mux_2x1:myMux|               ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_5|mux_8x1:Result|mux_2x1:myMux                                    ; work         ;
+;             |mux_4x1:myMux2|              ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_5|mux_8x1:Result|mux_4x1:myMux2                                   ; work         ;
+;                |mux_2x1:mux_1|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_5|mux_8x1:Result|mux_4x1:myMux2|mux_2x1:mux_1                     ; work         ;
+;                |mux_2x1:mux_2|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_5|mux_8x1:Result|mux_4x1:myMux2|mux_2x1:mux_2                     ; work         ;
+;       |ALU:bit_6|                         ; 13 (2)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_6                                                                 ; work         ;
+;          |mux_8x1:Result|                 ; 11 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_6|mux_8x1:Result                                                  ; work         ;
+;             |mux_2x1:myMux|               ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_6|mux_8x1:Result|mux_2x1:myMux                                    ; work         ;
+;             |mux_4x1:myMux1|              ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_6|mux_8x1:Result|mux_4x1:myMux1                                   ; work         ;
+;                |mux_2x1:mux_2|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_6|mux_8x1:Result|mux_4x1:myMux1|mux_2x1:mux_2                     ; work         ;
+;             |mux_4x1:myMux2|              ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_6|mux_8x1:Result|mux_4x1:myMux2                                   ; work         ;
+;                |mux_2x1:mux_1|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_6|mux_8x1:Result|mux_4x1:myMux2|mux_2x1:mux_1                     ; work         ;
+;                |mux_2x1:mux_2|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_6|mux_8x1:Result|mux_4x1:myMux2|mux_2x1:mux_2                     ; work         ;
+;       |ALU:bit_7|                         ; 14 (6)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_7                                                                 ; work         ;
+;          |mux_8x1:Result|                 ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_7|mux_8x1:Result                                                  ; work         ;
+;             |mux_2x1:myMux|               ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_7|mux_8x1:Result|mux_2x1:myMux                                    ; work         ;
+;             |mux_4x1:myMux2|              ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_7|mux_8x1:Result|mux_4x1:myMux2                                   ; work         ;
+;                |mux_2x1:mux_1|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_7|mux_8x1:Result|mux_4x1:myMux2|mux_2x1:mux_1                     ; work         ;
+;                |mux_2x1:mux_2|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_7|mux_8x1:Result|mux_4x1:myMux2|mux_2x1:mux_2                     ; work         ;
+;       |ALU:bit_8|                         ; 9 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_8                                                                 ; work         ;
+;          |mux_8x1:Result|                 ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_8|mux_8x1:Result                                                  ; work         ;
+;             |mux_2x1:myMux|               ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_8|mux_8x1:Result|mux_2x1:myMux                                    ; work         ;
+;             |mux_4x1:myMux2|              ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_8|mux_8x1:Result|mux_4x1:myMux2                                   ; work         ;
+;                |mux_2x1:mux_2|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_8|mux_8x1:Result|mux_4x1:myMux2|mux_2x1:mux_2                     ; work         ;
+;       |ALU:bit_9|                         ; 8 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_9                                                                 ; work         ;
+;          |mux_8x1:Result|                 ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_9|mux_8x1:Result                                                  ; work         ;
+;             |mux_2x1:myMux|               ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_9|mux_8x1:Result|mux_2x1:myMux                                    ; work         ;
+;             |mux_4x1:myMux2|              ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_9|mux_8x1:Result|mux_4x1:myMux2                                   ; work         ;
+;                |mux_2x1:mux_1|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_9|mux_8x1:Result|mux_4x1:myMux2|mux_2x1:mux_1                     ; work         ;
+;                |mux_2x1:mux_2|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|ALU:bit_9|mux_8x1:Result|mux_4x1:myMux2|mux_2x1:mux_2                     ; work         ;
+;       |mostALU:bit_31|                    ; 13 (2)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|mostALU:bit_31                                                            ; work         ;
+;          |mux_2x1:over|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|mostALU:bit_31|mux_2x1:over                                               ; work         ;
+;          |mux_8x1:Result|                 ; 9 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|mostALU:bit_31|mux_8x1:Result                                             ; work         ;
+;             |mux_2x1:myMux|               ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|mostALU:bit_31|mux_8x1:Result|mux_2x1:myMux                               ; work         ;
+;             |mux_4x1:myMux1|              ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|mostALU:bit_31|mux_8x1:Result|mux_4x1:myMux1                              ; work         ;
+;                |mux_2x1:mux_1|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|mostALU:bit_31|mux_8x1:Result|mux_4x1:myMux1|mux_2x1:mux_1                ; work         ;
+;                |mux_2x1:mux_2|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|mostALU:bit_31|mux_8x1:Result|mux_4x1:myMux1|mux_2x1:mux_2                ; work         ;
+;             |mux_4x1:myMux2|              ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|mostALU:bit_31|mux_8x1:Result|mux_4x1:myMux2                              ; work         ;
+;                |mux_2x1:mux_1|            ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|mostALU:bit_31|mux_8x1:Result|mux_4x1:myMux2|mux_2x1:mux_1                ; work         ;
+;                |mux_2x1:mux_2|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_32bit:ALU|mostALU:bit_31|mux_8x1:Result|mux_4x1:myMux2|mux_2x1:mux_2                ; work         ;
+;    |alu_control:AluControl|               ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|alu_control:AluControl                                                                  ; work         ;
+;    |branch_module:Branch|                 ; 116 (14)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch                                                                    ; work         ;
+;       |alu_32bit:MyAlu2|                  ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|alu_32bit:MyAlu2                                                   ; work         ;
+;          |ALU:bit_12|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|alu_32bit:MyAlu2|ALU:bit_12                                        ; work         ;
+;          |ALU:bit_15|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|alu_32bit:MyAlu2|ALU:bit_15                                        ; work         ;
+;          |ALU:bit_18|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|alu_32bit:MyAlu2|ALU:bit_18                                        ; work         ;
+;          |ALU:bit_21|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|alu_32bit:MyAlu2|ALU:bit_21                                        ; work         ;
+;          |ALU:bit_24|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|alu_32bit:MyAlu2|ALU:bit_24                                        ; work         ;
+;          |ALU:bit_27|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|alu_32bit:MyAlu2|ALU:bit_27                                        ; work         ;
+;          |ALU:bit_30|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|alu_32bit:MyAlu2|ALU:bit_30                                        ; work         ;
+;          |ALU:bit_3|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|alu_32bit:MyAlu2|ALU:bit_3                                         ; work         ;
+;          |ALU:bit_6|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|alu_32bit:MyAlu2|ALU:bit_6                                         ; work         ;
+;          |ALU:bit_9|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|alu_32bit:MyAlu2|ALU:bit_9                                         ; work         ;
+;       |alu_32bit:MyAlu|                   ; 59 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|alu_32bit:MyAlu                                                    ; work         ;
+;          |ALU:bit_10|                     ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|alu_32bit:MyAlu|ALU:bit_10                                         ; work         ;
+;          |ALU:bit_11|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|alu_32bit:MyAlu|ALU:bit_11                                         ; work         ;
+;          |ALU:bit_12|                     ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|alu_32bit:MyAlu|ALU:bit_12                                         ; work         ;
+;          |ALU:bit_13|                     ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|alu_32bit:MyAlu|ALU:bit_13                                         ; work         ;
+;          |ALU:bit_14|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|alu_32bit:MyAlu|ALU:bit_14                                         ; work         ;
+;          |ALU:bit_15|                     ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|alu_32bit:MyAlu|ALU:bit_15                                         ; work         ;
+;          |ALU:bit_16|                     ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|alu_32bit:MyAlu|ALU:bit_16                                         ; work         ;
+;          |ALU:bit_17|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|alu_32bit:MyAlu|ALU:bit_17                                         ; work         ;
+;          |ALU:bit_18|                     ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|alu_32bit:MyAlu|ALU:bit_18                                         ; work         ;
+;          |ALU:bit_19|                     ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|alu_32bit:MyAlu|ALU:bit_19                                         ; work         ;
+;          |ALU:bit_1|                      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|alu_32bit:MyAlu|ALU:bit_1                                          ; work         ;
+;          |ALU:bit_20|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|alu_32bit:MyAlu|ALU:bit_20                                         ; work         ;
+;          |ALU:bit_21|                     ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|alu_32bit:MyAlu|ALU:bit_21                                         ; work         ;
+;          |ALU:bit_22|                     ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|alu_32bit:MyAlu|ALU:bit_22                                         ; work         ;
+;          |ALU:bit_23|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|alu_32bit:MyAlu|ALU:bit_23                                         ; work         ;
+;          |ALU:bit_24|                     ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|alu_32bit:MyAlu|ALU:bit_24                                         ; work         ;
+;          |ALU:bit_25|                     ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|alu_32bit:MyAlu|ALU:bit_25                                         ; work         ;
+;          |ALU:bit_26|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|alu_32bit:MyAlu|ALU:bit_26                                         ; work         ;
+;          |ALU:bit_27|                     ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|alu_32bit:MyAlu|ALU:bit_27                                         ; work         ;
+;          |ALU:bit_28|                     ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|alu_32bit:MyAlu|ALU:bit_28                                         ; work         ;
+;          |ALU:bit_29|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|alu_32bit:MyAlu|ALU:bit_29                                         ; work         ;
+;          |ALU:bit_2|                      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|alu_32bit:MyAlu|ALU:bit_2                                          ; work         ;
+;          |ALU:bit_30|                     ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|alu_32bit:MyAlu|ALU:bit_30                                         ; work         ;
+;          |ALU:bit_3|                      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|alu_32bit:MyAlu|ALU:bit_3                                          ; work         ;
+;          |ALU:bit_4|                      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|alu_32bit:MyAlu|ALU:bit_4                                          ; work         ;
+;          |ALU:bit_5|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|alu_32bit:MyAlu|ALU:bit_5                                          ; work         ;
+;          |ALU:bit_6|                      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|alu_32bit:MyAlu|ALU:bit_6                                          ; work         ;
+;          |ALU:bit_7|                      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|alu_32bit:MyAlu|ALU:bit_7                                          ; work         ;
+;          |ALU:bit_8|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|alu_32bit:MyAlu|ALU:bit_8                                          ; work         ;
+;          |ALU:bit_9|                      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|alu_32bit:MyAlu|ALU:bit_9                                          ; work         ;
+;       |mux_2x1_32bit:pcMux|               ; 33 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|mux_2x1_32bit:pcMux                                                ; work         ;
+;          |mux_2x1:bit0|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|mux_2x1_32bit:pcMux|mux_2x1:bit0                                   ; work         ;
+;          |mux_2x1:bit10|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|mux_2x1_32bit:pcMux|mux_2x1:bit10                                  ; work         ;
+;          |mux_2x1:bit11|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|mux_2x1_32bit:pcMux|mux_2x1:bit11                                  ; work         ;
+;          |mux_2x1:bit12|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|mux_2x1_32bit:pcMux|mux_2x1:bit12                                  ; work         ;
+;          |mux_2x1:bit13|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|mux_2x1_32bit:pcMux|mux_2x1:bit13                                  ; work         ;
+;          |mux_2x1:bit14|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|mux_2x1_32bit:pcMux|mux_2x1:bit14                                  ; work         ;
+;          |mux_2x1:bit15|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|mux_2x1_32bit:pcMux|mux_2x1:bit15                                  ; work         ;
+;          |mux_2x1:bit16|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|mux_2x1_32bit:pcMux|mux_2x1:bit16                                  ; work         ;
+;          |mux_2x1:bit17|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|mux_2x1_32bit:pcMux|mux_2x1:bit17                                  ; work         ;
+;          |mux_2x1:bit18|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|mux_2x1_32bit:pcMux|mux_2x1:bit18                                  ; work         ;
+;          |mux_2x1:bit19|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|mux_2x1_32bit:pcMux|mux_2x1:bit19                                  ; work         ;
+;          |mux_2x1:bit1|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|mux_2x1_32bit:pcMux|mux_2x1:bit1                                   ; work         ;
+;          |mux_2x1:bit20|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|mux_2x1_32bit:pcMux|mux_2x1:bit20                                  ; work         ;
+;          |mux_2x1:bit21|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|mux_2x1_32bit:pcMux|mux_2x1:bit21                                  ; work         ;
+;          |mux_2x1:bit22|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|mux_2x1_32bit:pcMux|mux_2x1:bit22                                  ; work         ;
+;          |mux_2x1:bit23|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|mux_2x1_32bit:pcMux|mux_2x1:bit23                                  ; work         ;
+;          |mux_2x1:bit24|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|mux_2x1_32bit:pcMux|mux_2x1:bit24                                  ; work         ;
+;          |mux_2x1:bit25|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|mux_2x1_32bit:pcMux|mux_2x1:bit25                                  ; work         ;
+;          |mux_2x1:bit26|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|mux_2x1_32bit:pcMux|mux_2x1:bit26                                  ; work         ;
+;          |mux_2x1:bit27|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|mux_2x1_32bit:pcMux|mux_2x1:bit27                                  ; work         ;
+;          |mux_2x1:bit28|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|mux_2x1_32bit:pcMux|mux_2x1:bit28                                  ; work         ;
+;          |mux_2x1:bit29|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|mux_2x1_32bit:pcMux|mux_2x1:bit29                                  ; work         ;
+;          |mux_2x1:bit2|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|mux_2x1_32bit:pcMux|mux_2x1:bit2                                   ; work         ;
+;          |mux_2x1:bit30|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|mux_2x1_32bit:pcMux|mux_2x1:bit30                                  ; work         ;
+;          |mux_2x1:bit31|                  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|mux_2x1_32bit:pcMux|mux_2x1:bit31                                  ; work         ;
+;          |mux_2x1:bit3|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|mux_2x1_32bit:pcMux|mux_2x1:bit3                                   ; work         ;
+;          |mux_2x1:bit4|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|mux_2x1_32bit:pcMux|mux_2x1:bit4                                   ; work         ;
+;          |mux_2x1:bit5|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|mux_2x1_32bit:pcMux|mux_2x1:bit5                                   ; work         ;
+;          |mux_2x1:bit6|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|mux_2x1_32bit:pcMux|mux_2x1:bit6                                   ; work         ;
+;          |mux_2x1:bit7|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|mux_2x1_32bit:pcMux|mux_2x1:bit7                                   ; work         ;
+;          |mux_2x1:bit8|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|mux_2x1_32bit:pcMux|mux_2x1:bit8                                   ; work         ;
+;          |mux_2x1:bit9|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|branch_module:Branch|mux_2x1_32bit:pcMux|mux_2x1:bit9                                   ; work         ;
+;    |instruction_memory:InstMem|           ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|instruction_memory:InstMem                                                              ; work         ;
+;       |altsyncram:instructions_rtl_0|     ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|instruction_memory:InstMem|altsyncram:instructions_rtl_0                                ; work         ;
+;          |altsyncram_ca81:auto_generated| ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|instruction_memory:InstMem|altsyncram:instructions_rtl_0|altsyncram_ca81:auto_generated ; work         ;
+;    |main_control:Control|                 ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|main_control:Control                                                                    ; work         ;
+;    |mips_memory:Cash|                     ; 6450 (6450)       ; 8192 (8192)  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mips_memory:Cash                                                                        ; work         ;
+;    |mips_registers:Registers1|            ; 340 (340)         ; 224 (224)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mips_registers:Registers1                                                               ; work         ;
+;    |mux_2x1:writeReg0|                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1:writeReg0                                                                       ; work         ;
+;    |mux_2x1:writeReg1|                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1:writeReg1                                                                       ; work         ;
+;    |mux_2x1:writeReg2|                    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1:writeReg2                                                                       ; work         ;
+;    |mux_2x1_32bit:WriteData|              ; 32 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:WriteData                                                                 ; work         ;
+;       |mux_2x1:bit0|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:WriteData|mux_2x1:bit0                                                    ; work         ;
+;       |mux_2x1:bit10|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:WriteData|mux_2x1:bit10                                                   ; work         ;
+;       |mux_2x1:bit11|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:WriteData|mux_2x1:bit11                                                   ; work         ;
+;       |mux_2x1:bit12|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:WriteData|mux_2x1:bit12                                                   ; work         ;
+;       |mux_2x1:bit13|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:WriteData|mux_2x1:bit13                                                   ; work         ;
+;       |mux_2x1:bit14|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:WriteData|mux_2x1:bit14                                                   ; work         ;
+;       |mux_2x1:bit15|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:WriteData|mux_2x1:bit15                                                   ; work         ;
+;       |mux_2x1:bit16|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:WriteData|mux_2x1:bit16                                                   ; work         ;
+;       |mux_2x1:bit17|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:WriteData|mux_2x1:bit17                                                   ; work         ;
+;       |mux_2x1:bit18|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:WriteData|mux_2x1:bit18                                                   ; work         ;
+;       |mux_2x1:bit19|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:WriteData|mux_2x1:bit19                                                   ; work         ;
+;       |mux_2x1:bit1|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:WriteData|mux_2x1:bit1                                                    ; work         ;
+;       |mux_2x1:bit20|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:WriteData|mux_2x1:bit20                                                   ; work         ;
+;       |mux_2x1:bit21|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:WriteData|mux_2x1:bit21                                                   ; work         ;
+;       |mux_2x1:bit22|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:WriteData|mux_2x1:bit22                                                   ; work         ;
+;       |mux_2x1:bit23|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:WriteData|mux_2x1:bit23                                                   ; work         ;
+;       |mux_2x1:bit24|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:WriteData|mux_2x1:bit24                                                   ; work         ;
+;       |mux_2x1:bit25|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:WriteData|mux_2x1:bit25                                                   ; work         ;
+;       |mux_2x1:bit26|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:WriteData|mux_2x1:bit26                                                   ; work         ;
+;       |mux_2x1:bit27|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:WriteData|mux_2x1:bit27                                                   ; work         ;
+;       |mux_2x1:bit28|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:WriteData|mux_2x1:bit28                                                   ; work         ;
+;       |mux_2x1:bit29|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:WriteData|mux_2x1:bit29                                                   ; work         ;
+;       |mux_2x1:bit2|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:WriteData|mux_2x1:bit2                                                    ; work         ;
+;       |mux_2x1:bit30|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:WriteData|mux_2x1:bit30                                                   ; work         ;
+;       |mux_2x1:bit31|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:WriteData|mux_2x1:bit31                                                   ; work         ;
+;       |mux_2x1:bit3|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:WriteData|mux_2x1:bit3                                                    ; work         ;
+;       |mux_2x1:bit4|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:WriteData|mux_2x1:bit4                                                    ; work         ;
+;       |mux_2x1:bit5|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:WriteData|mux_2x1:bit5                                                    ; work         ;
+;       |mux_2x1:bit6|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:WriteData|mux_2x1:bit6                                                    ; work         ;
+;       |mux_2x1:bit7|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:WriteData|mux_2x1:bit7                                                    ; work         ;
+;       |mux_2x1:bit8|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:WriteData|mux_2x1:bit8                                                    ; work         ;
+;       |mux_2x1:bit9|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:WriteData|mux_2x1:bit9                                                    ; work         ;
+;    |mux_2x1_32bit:aluTypeData|            ; 40 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:aluTypeData                                                               ; work         ;
+;       |mux_2x1:bit0|                      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:aluTypeData|mux_2x1:bit0                                                  ; work         ;
+;       |mux_2x1:bit10|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:aluTypeData|mux_2x1:bit10                                                 ; work         ;
+;       |mux_2x1:bit11|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:aluTypeData|mux_2x1:bit11                                                 ; work         ;
+;       |mux_2x1:bit12|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:aluTypeData|mux_2x1:bit12                                                 ; work         ;
+;       |mux_2x1:bit13|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:aluTypeData|mux_2x1:bit13                                                 ; work         ;
+;       |mux_2x1:bit14|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:aluTypeData|mux_2x1:bit14                                                 ; work         ;
+;       |mux_2x1:bit15|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:aluTypeData|mux_2x1:bit15                                                 ; work         ;
+;       |mux_2x1:bit16|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:aluTypeData|mux_2x1:bit16                                                 ; work         ;
+;       |mux_2x1:bit17|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:aluTypeData|mux_2x1:bit17                                                 ; work         ;
+;       |mux_2x1:bit18|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:aluTypeData|mux_2x1:bit18                                                 ; work         ;
+;       |mux_2x1:bit19|                     ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:aluTypeData|mux_2x1:bit19                                                 ; work         ;
+;       |mux_2x1:bit1|                      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:aluTypeData|mux_2x1:bit1                                                  ; work         ;
+;       |mux_2x1:bit20|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:aluTypeData|mux_2x1:bit20                                                 ; work         ;
+;       |mux_2x1:bit21|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:aluTypeData|mux_2x1:bit21                                                 ; work         ;
+;       |mux_2x1:bit22|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:aluTypeData|mux_2x1:bit22                                                 ; work         ;
+;       |mux_2x1:bit23|                     ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:aluTypeData|mux_2x1:bit23                                                 ; work         ;
+;       |mux_2x1:bit24|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:aluTypeData|mux_2x1:bit24                                                 ; work         ;
+;       |mux_2x1:bit25|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:aluTypeData|mux_2x1:bit25                                                 ; work         ;
+;       |mux_2x1:bit26|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:aluTypeData|mux_2x1:bit26                                                 ; work         ;
+;       |mux_2x1:bit27|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:aluTypeData|mux_2x1:bit27                                                 ; work         ;
+;       |mux_2x1:bit28|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:aluTypeData|mux_2x1:bit28                                                 ; work         ;
+;       |mux_2x1:bit29|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:aluTypeData|mux_2x1:bit29                                                 ; work         ;
+;       |mux_2x1:bit2|                      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:aluTypeData|mux_2x1:bit2                                                  ; work         ;
+;       |mux_2x1:bit30|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:aluTypeData|mux_2x1:bit30                                                 ; work         ;
+;       |mux_2x1:bit31|                     ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:aluTypeData|mux_2x1:bit31                                                 ; work         ;
+;       |mux_2x1:bit3|                      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:aluTypeData|mux_2x1:bit3                                                  ; work         ;
+;       |mux_2x1:bit4|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:aluTypeData|mux_2x1:bit4                                                  ; work         ;
+;       |mux_2x1:bit5|                      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:aluTypeData|mux_2x1:bit5                                                  ; work         ;
+;       |mux_2x1:bit6|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:aluTypeData|mux_2x1:bit6                                                  ; work         ;
+;       |mux_2x1:bit7|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:aluTypeData|mux_2x1:bit7                                                  ; work         ;
+;       |mux_2x1:bit8|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:aluTypeData|mux_2x1:bit8                                                  ; work         ;
+;       |mux_2x1:bit9|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:aluTypeData|mux_2x1:bit9                                                  ; work         ;
+;    |mux_2x1_32bit:immType|                ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:immType                                                                   ; work         ;
+;       |mux_2x1:bit30|                     ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MiniMIPS|mux_2x1_32bit:immType|mux_2x1:bit30                                                     ; work         ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                            ;
++----------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+-------------------------------------------------------+
+; Name                                                                                               ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF                                                   ;
++----------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+-------------------------------------------------------+
+; instruction_memory:InstMem|altsyncram:instructions_rtl_0|altsyncram_ca81:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 256          ; 16           ; --           ; --           ; 4096 ; db/project03.ram0_instruction_memory_68fd8bb8.hdl.mif ;
++----------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+-------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                    ;
++-----------------------------------------------------+-------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal     ; Free of Timing Hazards ;
++-----------------------------------------------------+-------------------------+------------------------+
+; mips_memory:Cash|read_data[30]                      ; main_control:Control|Lw ; yes                    ;
+; mips_memory:Cash|read_data[29]                      ; main_control:Control|Lw ; yes                    ;
+; mips_memory:Cash|read_data[28]                      ; main_control:Control|Lw ; yes                    ;
+; mips_memory:Cash|read_data[27]                      ; main_control:Control|Lw ; yes                    ;
+; mips_memory:Cash|read_data[26]                      ; main_control:Control|Lw ; yes                    ;
+; mips_memory:Cash|read_data[25]                      ; main_control:Control|Lw ; yes                    ;
+; mips_memory:Cash|read_data[24]                      ; main_control:Control|Lw ; yes                    ;
+; mips_memory:Cash|read_data[23]                      ; main_control:Control|Lw ; yes                    ;
+; mips_memory:Cash|read_data[22]                      ; main_control:Control|Lw ; yes                    ;
+; mips_memory:Cash|read_data[21]                      ; main_control:Control|Lw ; yes                    ;
+; mips_memory:Cash|read_data[20]                      ; main_control:Control|Lw ; yes                    ;
+; mips_memory:Cash|read_data[19]                      ; main_control:Control|Lw ; yes                    ;
+; mips_memory:Cash|read_data[18]                      ; main_control:Control|Lw ; yes                    ;
+; mips_memory:Cash|read_data[17]                      ; main_control:Control|Lw ; yes                    ;
+; mips_memory:Cash|read_data[16]                      ; main_control:Control|Lw ; yes                    ;
+; mips_memory:Cash|read_data[15]                      ; main_control:Control|Lw ; yes                    ;
+; mips_memory:Cash|read_data[14]                      ; main_control:Control|Lw ; yes                    ;
+; mips_memory:Cash|read_data[13]                      ; main_control:Control|Lw ; yes                    ;
+; mips_memory:Cash|read_data[12]                      ; main_control:Control|Lw ; yes                    ;
+; mips_memory:Cash|read_data[11]                      ; main_control:Control|Lw ; yes                    ;
+; mips_memory:Cash|read_data[10]                      ; main_control:Control|Lw ; yes                    ;
+; mips_memory:Cash|read_data[9]                       ; main_control:Control|Lw ; yes                    ;
+; mips_memory:Cash|read_data[8]                       ; main_control:Control|Lw ; yes                    ;
+; mips_memory:Cash|read_data[7]                       ; main_control:Control|Lw ; yes                    ;
+; mips_memory:Cash|read_data[6]                       ; main_control:Control|Lw ; yes                    ;
+; mips_memory:Cash|read_data[5]                       ; main_control:Control|Lw ; yes                    ;
+; mips_memory:Cash|read_data[4]                       ; main_control:Control|Lw ; yes                    ;
+; mips_memory:Cash|read_data[3]                       ; main_control:Control|Lw ; yes                    ;
+; mips_memory:Cash|read_data[2]                       ; main_control:Control|Lw ; yes                    ;
+; mips_memory:Cash|read_data[1]                       ; main_control:Control|Lw ; yes                    ;
+; mips_memory:Cash|read_data[0]                       ; main_control:Control|Lw ; yes                    ;
+; mips_memory:Cash|read_data[31]                      ; main_control:Control|Lw ; yes                    ;
+; Number of user-specified and inferred latches = 32  ;                         ;                        ;
++-----------------------------------------------------+-------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++--------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                   ;
++----------------------------------------+---------------------------------------------+
+; Register name                          ; Reason for Removal                          ;
++----------------------------------------+---------------------------------------------+
+; mips_registers:Registers1|registers~30 ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:Registers1|registers~29 ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:Registers1|registers~28 ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:Registers1|registers~27 ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:Registers1|registers~26 ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:Registers1|registers~25 ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:Registers1|registers~24 ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:Registers1|registers~23 ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:Registers1|registers~22 ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:Registers1|registers~21 ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:Registers1|registers~20 ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:Registers1|registers~19 ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:Registers1|registers~18 ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:Registers1|registers~17 ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:Registers1|registers~16 ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:Registers1|registers~15 ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:Registers1|registers~14 ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:Registers1|registers~13 ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:Registers1|registers~12 ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:Registers1|registers~11 ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:Registers1|registers~10 ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:Registers1|registers~9  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:Registers1|registers~8  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:Registers1|registers~7  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:Registers1|registers~6  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:Registers1|registers~5  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:Registers1|registers~4  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:Registers1|registers~3  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:Registers1|registers~2  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:Registers1|registers~1  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:Registers1|registers~0  ; Stuck at GND due to stuck port clock_enable ;
+; mips_registers:Registers1|registers~31 ; Stuck at GND due to stuck port clock_enable ;
+; Total Number of Removed Registers = 32 ;                                             ;
++----------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 8416  ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 8416  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions                                                         ;
++-----------------------------------------------+-----------------------------------------------+------+
+; Register Name                                 ; Megafunction                                  ; Type ;
++-----------------------------------------------+-----------------------------------------------+------+
+; instruction_memory:InstMem|instruction[0..15] ; instruction_memory:InstMem|instructions_rtl_0 ; RAM  ;
++-----------------------------------------------+-----------------------------------------------+------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
+; 5:1                ; 31 bits   ; 93 LEs        ; 93 LEs               ; 0 LEs                  ; No         ; |MiniMIPS|alu_32bit:ALU|ALU:bit_1|mux_8x1:Result|mux_2x1:myMux|Or0 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Source assignments for instruction_memory:InstMem|altsyncram:instructions_rtl_0|altsyncram_ca81:auto_generated ;
++---------------------------------+--------------------+------+--------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                               ;
++---------------------------------+--------------------+------+--------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                ;
++---------------------------------+--------------------+------+--------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: instruction_memory:InstMem|altsyncram:instructions_rtl_0   ;
++------------------------------------+-------------------------------------------------------+----------------+
+; Parameter Name                     ; Value                                                 ; Type           ;
++------------------------------------+-------------------------------------------------------+----------------+
+; BYTE_SIZE_BLOCK                    ; 8                                                     ; Untyped        ;
+; AUTO_CARRY_CHAINS                  ; ON                                                    ; AUTO_CARRY     ;
+; IGNORE_CARRY_BUFFERS               ; OFF                                                   ; IGNORE_CARRY   ;
+; AUTO_CASCADE_CHAINS                ; ON                                                    ; AUTO_CASCADE   ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                                                   ; IGNORE_CASCADE ;
+; WIDTH_BYTEENA                      ; 1                                                     ; Untyped        ;
+; OPERATION_MODE                     ; ROM                                                   ; Untyped        ;
+; WIDTH_A                            ; 16                                                    ; Untyped        ;
+; WIDTHAD_A                          ; 8                                                     ; Untyped        ;
+; NUMWORDS_A                         ; 256                                                   ; Untyped        ;
+; OUTDATA_REG_A                      ; UNREGISTERED                                          ; Untyped        ;
+; ADDRESS_ACLR_A                     ; NONE                                                  ; Untyped        ;
+; OUTDATA_ACLR_A                     ; NONE                                                  ; Untyped        ;
+; WRCONTROL_ACLR_A                   ; NONE                                                  ; Untyped        ;
+; INDATA_ACLR_A                      ; NONE                                                  ; Untyped        ;
+; BYTEENA_ACLR_A                     ; NONE                                                  ; Untyped        ;
+; WIDTH_B                            ; 1                                                     ; Untyped        ;
+; WIDTHAD_B                          ; 1                                                     ; Untyped        ;
+; NUMWORDS_B                         ; 1                                                     ; Untyped        ;
+; INDATA_REG_B                       ; CLOCK1                                                ; Untyped        ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                                                ; Untyped        ;
+; RDCONTROL_REG_B                    ; CLOCK1                                                ; Untyped        ;
+; ADDRESS_REG_B                      ; CLOCK1                                                ; Untyped        ;
+; OUTDATA_REG_B                      ; UNREGISTERED                                          ; Untyped        ;
+; BYTEENA_REG_B                      ; CLOCK1                                                ; Untyped        ;
+; INDATA_ACLR_B                      ; NONE                                                  ; Untyped        ;
+; WRCONTROL_ACLR_B                   ; NONE                                                  ; Untyped        ;
+; ADDRESS_ACLR_B                     ; NONE                                                  ; Untyped        ;
+; OUTDATA_ACLR_B                     ; NONE                                                  ; Untyped        ;
+; RDCONTROL_ACLR_B                   ; NONE                                                  ; Untyped        ;
+; BYTEENA_ACLR_B                     ; NONE                                                  ; Untyped        ;
+; WIDTH_BYTEENA_A                    ; 1                                                     ; Untyped        ;
+; WIDTH_BYTEENA_B                    ; 1                                                     ; Untyped        ;
+; RAM_BLOCK_TYPE                     ; AUTO                                                  ; Untyped        ;
+; BYTE_SIZE                          ; 8                                                     ; Untyped        ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                             ; Untyped        ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ                                  ; Untyped        ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ                                  ; Untyped        ;
+; INIT_FILE                          ; db/project03.ram0_instruction_memory_68fd8bb8.hdl.mif ; Untyped        ;
+; INIT_FILE_LAYOUT                   ; PORT_A                                                ; Untyped        ;
+; MAXIMUM_DEPTH                      ; 0                                                     ; Untyped        ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL                                                ; Untyped        ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                                                ; Untyped        ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL                                                ; Untyped        ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                                                ; Untyped        ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                                       ; Untyped        ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                                       ; Untyped        ;
+; ENABLE_ECC                         ; FALSE                                                 ; Untyped        ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                                                 ; Untyped        ;
+; WIDTH_ECCSTATUS                    ; 3                                                     ; Untyped        ;
+; DEVICE_FAMILY                      ; Cyclone III                                           ; Untyped        ;
+; CBXI_PARAMETER                     ; altsyncram_ca81                                       ; Untyped        ;
++------------------------------------+-------------------------------------------------------+----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                     ;
++-------------------------------------------+----------------------------------------------------------+
+; Name                                      ; Value                                                    ;
++-------------------------------------------+----------------------------------------------------------+
+; Number of entity instances                ; 1                                                        ;
+; Entity Instance                           ; instruction_memory:InstMem|altsyncram:instructions_rtl_0 ;
+;     -- OPERATION_MODE                     ; ROM                                                      ;
+;     -- WIDTH_A                            ; 16                                                       ;
+;     -- NUMWORDS_A                         ; 256                                                      ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                             ;
+;     -- WIDTH_B                            ; 1                                                        ;
+;     -- NUMWORDS_B                         ; 1                                                        ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                   ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                             ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                     ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                ;
++-------------------------------------------+----------------------------------------------------------+
+
+
++------------------------------------------------------------------+
+; Port Connectivity Checks: "branch_module:Branch|alu_32bit:MyAlu" ;
++-------+-------+----------+---------------------------------------+
+; Port  ; Type  ; Severity ; Details                               ;
++-------+-------+----------+---------------------------------------+
+; Aluop ; Input ; Info     ; Stuck at GND                          ;
+; cin   ; Input ; Info     ; Stuck at GND                          ;
++-------+-------+----------+---------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "branch_module:Branch|alu_32bit:MyAlu2"                                                  ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; a[31..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; a[0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; Aluop    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; cin      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; cout     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; S        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; V        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu_32bit:ALU|mostALU:bit_31|mux_8x1:Result" ;
++------+-------+----------+-----------------------------------------------+
+; Port ; Type  ; Severity ; Details                                       ;
++------+-------+----------+-----------------------------------------------+
+; d    ; Input ; Info     ; Stuck at GND                                  ;
++------+-------+----------+-----------------------------------------------+
+
+
++--------------------------------------------------------------------+
+; Port Connectivity Checks: "alu_32bit:ALU|ALU:bit_0|mux_8x1:Result" ;
++------+-------+----------+------------------------------------------+
+; Port ; Type  ; Severity ; Details                                  ;
++------+-------+----------+------------------------------------------+
+; d    ; Input ; Info     ; Stuck at GND                             ;
+; e    ; Input ; Info     ; Stuck at GND                             ;
++------+-------+----------+------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu_32bit:ALU"                                                                      ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; S    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; V    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:45     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+    Info: Processing started: Sun Jan 09 17:42:31 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off project03 -c project03
+Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
+Info (12021): Found 1 design units, including 1 entities, in source file minimips_testbench.v
+    Info (12023): Found entity 1: MiniMIPS_testbench
+Info (12021): Found 1 design units, including 1 entities, in source file minimips.v
+    Info (12023): Found entity 1: MiniMIPS
+Info (12021): Found 1 design units, including 1 entities, in source file mips_registers.v
+    Info (12023): Found entity 1: mips_registers
+Info (12021): Found 1 design units, including 1 entities, in source file main_control.v
+    Info (12023): Found entity 1: main_control
+Warning (10274): Verilog HDL macro warning at main_control_testbench.v(2): overriding existing definition for macro "DELAY", which was defined in "MiniMIPS_testbench.v", line 2
+Info (12021): Found 1 design units, including 1 entities, in source file main_control_testbench.v
+    Info (12023): Found entity 1: main_control_testbench
+Info (12021): Found 1 design units, including 1 entities, in source file alu_control.v
+    Info (12023): Found entity 1: alu_control
+Info (12021): Found 1 design units, including 1 entities, in source file alu_control_testbench.v
+    Info (12023): Found entity 1: alu_control_testbench
+Info (12021): Found 1 design units, including 1 entities, in source file mux_2x1.v
+    Info (12023): Found entity 1: mux_2x1
+Info (12021): Found 1 design units, including 1 entities, in source file mux_4x1.v
+    Info (12023): Found entity 1: mux_4x1
+Info (12021): Found 1 design units, including 1 entities, in source file mux_8x1.v
+    Info (12023): Found entity 1: mux_8x1
+Warning (10274): Verilog HDL macro warning at mux_2x1_testbench.v(2): overriding existing definition for macro "DELAY", which was defined in "MiniMIPS_testbench.v", line 2
+Info (12021): Found 1 design units, including 1 entities, in source file mux_2x1_testbench.v
+    Info (12023): Found entity 1: mux_2x1_testbench
+Info (12021): Found 1 design units, including 1 entities, in source file mux_4x1_testbench.v
+    Info (12023): Found entity 1: mux_4x1_testbench
+Info (12021): Found 1 design units, including 1 entities, in source file mux_8x1_testbench.v
+    Info (12023): Found entity 1: mux_8x1_testbench
+Info (12021): Found 1 design units, including 1 entities, in source file onebitalu.v
+    Info (12023): Found entity 1: onebitALU
+Info (12021): Found 1 design units, including 1 entities, in source file onebitalu_testbench.v
+    Info (12023): Found entity 1: onebitALU_testbench
+Info (12021): Found 1 design units, including 1 entities, in source file twobitalu.v
+    Info (12023): Found entity 1: twoBitALU
+Info (12021): Found 1 design units, including 1 entities, in source file twobitalu_testbench.v
+    Info (12023): Found entity 1: twoBitALU_testbench
+Info (12021): Found 1 design units, including 1 entities, in source file alu.v
+    Info (12023): Found entity 1: ALU
+Info (12021): Found 1 design units, including 1 entities, in source file mostalu.v
+    Info (12023): Found entity 1: mostALU
+Info (12021): Found 1 design units, including 1 entities, in source file alu_32bit.v
+    Info (12023): Found entity 1: alu_32bit
+Info (12021): Found 1 design units, including 1 entities, in source file alu_32bit_testbench.v
+    Info (12023): Found entity 1: alu_32bit_testbench
+Info (12021): Found 1 design units, including 1 entities, in source file signextend.v
+    Info (12023): Found entity 1: signExtend
+Info (12021): Found 1 design units, including 1 entities, in source file signextend_testbench.v
+    Info (12023): Found entity 1: signExtend_testbench
+Info (12021): Found 1 design units, including 1 entities, in source file shiftleft2.v
+    Info (12023): Found entity 1: shiftLeft2
+Warning (10274): Verilog HDL macro warning at mips_registers_testbench.v(2): overriding existing definition for macro "DELAY", which was defined in "MiniMIPS_testbench.v", line 2
+Info (12021): Found 1 design units, including 1 entities, in source file mips_registers_testbench.v
+    Info (12023): Found entity 1: mips_registers_testbench
+Warning (10274): Verilog HDL macro warning at register_testbench2.v(2): overriding existing definition for macro "DELAY", which was defined in "MiniMIPS_testbench.v", line 2
+Info (12021): Found 1 design units, including 1 entities, in source file register_testbench2.v
+    Info (12023): Found entity 1: register_testbench2
+Info (12021): Found 1 design units, including 1 entities, in source file mips_memory.v
+    Info (12023): Found entity 1: mips_memory
+Warning (10274): Verilog HDL macro warning at mips_memory_testbench.v(2): overriding existing definition for macro "DELAY", which was defined in "MiniMIPS_testbench.v", line 2
+Info (12021): Found 1 design units, including 1 entities, in source file mips_memory_testbench.v
+    Info (12023): Found entity 1: mips_memory_testbench
+Info (12021): Found 1 design units, including 1 entities, in source file mux_2x1_32bit.v
+    Info (12023): Found entity 1: mux_2x1_32bit
+Info (12021): Found 1 design units, including 1 entities, in source file mux_2x1_32bit_testbech.v
+    Info (12023): Found entity 1: mux_2x1_32bit_testbech
+Info (12021): Found 1 design units, including 1 entities, in source file instruction_memory.v
+    Info (12023): Found entity 1: instruction_memory
+Info (12021): Found 1 design units, including 1 entities, in source file instruction_memory_testbench.v
+    Info (12023): Found entity 1: instruction_memory_testbench
+Info (12021): Found 1 design units, including 1 entities, in source file zero_extend.v
+    Info (12023): Found entity 1: zero_extend
+Info (12021): Found 1 design units, including 1 entities, in source file instruction_decode.v
+    Info (12023): Found entity 1: instruction_decode
+Info (12021): Found 1 design units, including 1 entities, in source file branch_module.v
+    Info (12023): Found entity 1: branch_module
+Warning (10274): Verilog HDL macro warning at zero_extend_testbrench.v(2): overriding existing definition for macro "DELAY", which was defined in "MiniMIPS_testbench.v", line 2
+Info (12021): Found 1 design units, including 1 entities, in source file zero_extend_testbrench.v
+    Info (12023): Found entity 1: zero_extend_testbrench
+Info (12021): Found 1 design units, including 1 entities, in source file instruction_decode_testbrench.v
+    Info (12023): Found entity 1: instruction_decode_testbrench
+Info (12021): Found 1 design units, including 1 entities, in source file branch_module_testbrench.v
+    Info (12023): Found entity 1: branch_module_testbrench
+Info (12127): Elaborating entity "MiniMIPS" for the top level hierarchy
+Info (12128): Elaborating entity "instruction_memory" for hierarchy "instruction_memory:InstMem"
+Warning (10850): Verilog HDL warning at instruction_memory.v(9): number of words (30) in memory file does not match the number of elements in the address range [0:255]
+Warning (10030): Net "instructions.data_a" at instruction_memory.v(6) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "instructions.waddr_a" at instruction_memory.v(6) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "instructions.we_a" at instruction_memory.v(6) has no driver or initial value, using a default initial value '0'
+Info (12128): Elaborating entity "instruction_decode" for hierarchy "instruction_decode:Decode"
+Info (12128): Elaborating entity "main_control" for hierarchy "main_control:Control"
+Info (12128): Elaborating entity "mux_2x1" for hierarchy "mux_2x1:writeReg0"
+Info (12128): Elaborating entity "mips_registers" for hierarchy "mips_registers:Registers1"
+Warning (10175): Verilog HDL warning at mips_registers.v(26): ignoring unsupported system task
+Info (12128): Elaborating entity "signExtend" for hierarchy "signExtend:SignExtend"
+Info (12128): Elaborating entity "zero_extend" for hierarchy "zero_extend:ZeroExtend"
+Info (12128): Elaborating entity "mux_2x1_32bit" for hierarchy "mux_2x1_32bit:immType"
+Info (12128): Elaborating entity "alu_control" for hierarchy "alu_control:AluControl"
+Info (12128): Elaborating entity "alu_32bit" for hierarchy "alu_32bit:ALU"
+Info (12128): Elaborating entity "ALU" for hierarchy "alu_32bit:ALU|ALU:bit_0"
+Info (12128): Elaborating entity "mux_8x1" for hierarchy "alu_32bit:ALU|ALU:bit_0|mux_8x1:Result"
+Info (12128): Elaborating entity "mux_4x1" for hierarchy "alu_32bit:ALU|ALU:bit_0|mux_8x1:Result|mux_4x1:myMux1"
+Info (12128): Elaborating entity "mostALU" for hierarchy "alu_32bit:ALU|mostALU:bit_31"
+Info (12128): Elaborating entity "branch_module" for hierarchy "branch_module:Branch"
+Info (12128): Elaborating entity "mips_memory" for hierarchy "mips_memory:Cash"
+Warning (10240): Verilog HDL Always Construct warning at mips_memory.v(18): inferring latch(es) for variable "read_data", which holds its previous value in one or more paths through the always construct
+Warning (10175): Verilog HDL warning at mips_memory.v(32): ignoring unsupported system task
+Info (10041): Inferred latch for "read_data[0]" at mips_memory.v(18)
+Info (10041): Inferred latch for "read_data[1]" at mips_memory.v(18)
+Info (10041): Inferred latch for "read_data[2]" at mips_memory.v(18)
+Info (10041): Inferred latch for "read_data[3]" at mips_memory.v(18)
+Info (10041): Inferred latch for "read_data[4]" at mips_memory.v(18)
+Info (10041): Inferred latch for "read_data[5]" at mips_memory.v(18)
+Info (10041): Inferred latch for "read_data[6]" at mips_memory.v(18)
+Info (10041): Inferred latch for "read_data[7]" at mips_memory.v(18)
+Info (10041): Inferred latch for "read_data[8]" at mips_memory.v(18)
+Info (10041): Inferred latch for "read_data[9]" at mips_memory.v(18)
+Info (10041): Inferred latch for "read_data[10]" at mips_memory.v(18)
+Info (10041): Inferred latch for "read_data[11]" at mips_memory.v(18)
+Info (10041): Inferred latch for "read_data[12]" at mips_memory.v(18)
+Info (10041): Inferred latch for "read_data[13]" at mips_memory.v(18)
+Info (10041): Inferred latch for "read_data[14]" at mips_memory.v(18)
+Info (10041): Inferred latch for "read_data[15]" at mips_memory.v(18)
+Info (10041): Inferred latch for "read_data[16]" at mips_memory.v(18)
+Info (10041): Inferred latch for "read_data[17]" at mips_memory.v(18)
+Info (10041): Inferred latch for "read_data[18]" at mips_memory.v(18)
+Info (10041): Inferred latch for "read_data[19]" at mips_memory.v(18)
+Info (10041): Inferred latch for "read_data[20]" at mips_memory.v(18)
+Info (10041): Inferred latch for "read_data[21]" at mips_memory.v(18)
+Info (10041): Inferred latch for "read_data[22]" at mips_memory.v(18)
+Info (10041): Inferred latch for "read_data[23]" at mips_memory.v(18)
+Info (10041): Inferred latch for "read_data[24]" at mips_memory.v(18)
+Info (10041): Inferred latch for "read_data[25]" at mips_memory.v(18)
+Info (10041): Inferred latch for "read_data[26]" at mips_memory.v(18)
+Info (10041): Inferred latch for "read_data[27]" at mips_memory.v(18)
+Info (10041): Inferred latch for "read_data[28]" at mips_memory.v(18)
+Info (10041): Inferred latch for "read_data[29]" at mips_memory.v(18)
+Info (10041): Inferred latch for "read_data[30]" at mips_memory.v(18)
+Info (10041): Inferred latch for "read_data[31]" at mips_memory.v(18)
+Info (276014): Found 2 instances of uninferred RAM logic
+    Info (276004): RAM logic "mips_registers:Registers1|registers" is uninferred due to inappropriate RAM size
+    Info (276007): RAM logic "mips_memory:Cash|memory" is uninferred due to asynchronous read logic
+Info (19000): Inferred 1 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "instruction_memory:InstMem|instructions_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to ROM
+        Info (286033): Parameter WIDTH_A set to 16
+        Info (286033): Parameter WIDTHAD_A set to 8
+        Info (286033): Parameter NUMWORDS_A set to 256
+        Info (286033): Parameter OUTDATA_REG_A set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_A set to NONE
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter INIT_FILE set to db/project03.ram0_instruction_memory_68fd8bb8.hdl.mif
+Info (12130): Elaborated megafunction instantiation "instruction_memory:InstMem|altsyncram:instructions_rtl_0"
+Info (12133): Instantiated megafunction "instruction_memory:InstMem|altsyncram:instructions_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "ROM"
+    Info (12134): Parameter "WIDTH_A" = "16"
+    Info (12134): Parameter "WIDTHAD_A" = "8"
+    Info (12134): Parameter "NUMWORDS_A" = "256"
+    Info (12134): Parameter "OUTDATA_REG_A" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "INIT_FILE" = "db/project03.ram0_instruction_memory_68fd8bb8.hdl.mif"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ca81.tdf
+    Info (12023): Found entity 1: altsyncram_ca81
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/teslim/1901042697/1901042697_restored/db/project03.ram0_instruction_memory_68fd8bb8.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/teslim/1901042697/1901042697_restored/db/project03.ram0_instruction_memory_68fd8bb8.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Warning (13012): Latch mips_memory:Cash|read_data[30] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal instruction_memory:InstMem|altsyncram:instructions_rtl_0|altsyncram_ca81:auto_generated|ram_block1a14
+Warning (13012): Latch mips_memory:Cash|read_data[29] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal instruction_memory:InstMem|altsyncram:instructions_rtl_0|altsyncram_ca81:auto_generated|ram_block1a14
+Warning (13012): Latch mips_memory:Cash|read_data[28] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal instruction_memory:InstMem|altsyncram:instructions_rtl_0|altsyncram_ca81:auto_generated|ram_block1a14
+Warning (13012): Latch mips_memory:Cash|read_data[27] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal instruction_memory:InstMem|altsyncram:instructions_rtl_0|altsyncram_ca81:auto_generated|ram_block1a14
+Warning (13012): Latch mips_memory:Cash|read_data[26] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal instruction_memory:InstMem|altsyncram:instructions_rtl_0|altsyncram_ca81:auto_generated|ram_block1a14
+Warning (13012): Latch mips_memory:Cash|read_data[25] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal instruction_memory:InstMem|altsyncram:instructions_rtl_0|altsyncram_ca81:auto_generated|ram_block1a14
+Warning (13012): Latch mips_memory:Cash|read_data[24] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal instruction_memory:InstMem|altsyncram:instructions_rtl_0|altsyncram_ca81:auto_generated|ram_block1a14
+Warning (13012): Latch mips_memory:Cash|read_data[23] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal instruction_memory:InstMem|altsyncram:instructions_rtl_0|altsyncram_ca81:auto_generated|ram_block1a14
+Warning (13012): Latch mips_memory:Cash|read_data[22] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal instruction_memory:InstMem|altsyncram:instructions_rtl_0|altsyncram_ca81:auto_generated|ram_block1a14
+Warning (13012): Latch mips_memory:Cash|read_data[21] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal instruction_memory:InstMem|altsyncram:instructions_rtl_0|altsyncram_ca81:auto_generated|ram_block1a14
+Warning (13012): Latch mips_memory:Cash|read_data[20] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal instruction_memory:InstMem|altsyncram:instructions_rtl_0|altsyncram_ca81:auto_generated|ram_block1a14
+Warning (13012): Latch mips_memory:Cash|read_data[19] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal instruction_memory:InstMem|altsyncram:instructions_rtl_0|altsyncram_ca81:auto_generated|ram_block1a14
+Warning (13012): Latch mips_memory:Cash|read_data[18] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal instruction_memory:InstMem|altsyncram:instructions_rtl_0|altsyncram_ca81:auto_generated|ram_block1a14
+Warning (13012): Latch mips_memory:Cash|read_data[17] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal instruction_memory:InstMem|altsyncram:instructions_rtl_0|altsyncram_ca81:auto_generated|ram_block1a14
+Warning (13012): Latch mips_memory:Cash|read_data[16] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal instruction_memory:InstMem|altsyncram:instructions_rtl_0|altsyncram_ca81:auto_generated|ram_block1a14
+Warning (13012): Latch mips_memory:Cash|read_data[15] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal instruction_memory:InstMem|altsyncram:instructions_rtl_0|altsyncram_ca81:auto_generated|ram_block1a14
+Warning (13012): Latch mips_memory:Cash|read_data[14] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal instruction_memory:InstMem|altsyncram:instructions_rtl_0|altsyncram_ca81:auto_generated|ram_block1a14
+Warning (13012): Latch mips_memory:Cash|read_data[13] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal instruction_memory:InstMem|altsyncram:instructions_rtl_0|altsyncram_ca81:auto_generated|ram_block1a14
+Warning (13012): Latch mips_memory:Cash|read_data[12] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal instruction_memory:InstMem|altsyncram:instructions_rtl_0|altsyncram_ca81:auto_generated|ram_block1a14
+Warning (13012): Latch mips_memory:Cash|read_data[11] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal instruction_memory:InstMem|altsyncram:instructions_rtl_0|altsyncram_ca81:auto_generated|ram_block1a14
+Warning (13012): Latch mips_memory:Cash|read_data[10] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal instruction_memory:InstMem|altsyncram:instructions_rtl_0|altsyncram_ca81:auto_generated|ram_block1a14
+Warning (13012): Latch mips_memory:Cash|read_data[9] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal instruction_memory:InstMem|altsyncram:instructions_rtl_0|altsyncram_ca81:auto_generated|ram_block1a14
+Warning (13012): Latch mips_memory:Cash|read_data[8] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal instruction_memory:InstMem|altsyncram:instructions_rtl_0|altsyncram_ca81:auto_generated|ram_block1a14
+Warning (13012): Latch mips_memory:Cash|read_data[7] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal instruction_memory:InstMem|altsyncram:instructions_rtl_0|altsyncram_ca81:auto_generated|ram_block1a14
+Warning (13012): Latch mips_memory:Cash|read_data[6] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal instruction_memory:InstMem|altsyncram:instructions_rtl_0|altsyncram_ca81:auto_generated|ram_block1a14
+Warning (13012): Latch mips_memory:Cash|read_data[5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal instruction_memory:InstMem|altsyncram:instructions_rtl_0|altsyncram_ca81:auto_generated|ram_block1a14
+Warning (13012): Latch mips_memory:Cash|read_data[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal instruction_memory:InstMem|altsyncram:instructions_rtl_0|altsyncram_ca81:auto_generated|ram_block1a14
+Warning (13012): Latch mips_memory:Cash|read_data[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal instruction_memory:InstMem|altsyncram:instructions_rtl_0|altsyncram_ca81:auto_generated|ram_block1a14
+Warning (13012): Latch mips_memory:Cash|read_data[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal instruction_memory:InstMem|altsyncram:instructions_rtl_0|altsyncram_ca81:auto_generated|ram_block1a14
+Warning (13012): Latch mips_memory:Cash|read_data[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal instruction_memory:InstMem|altsyncram:instructions_rtl_0|altsyncram_ca81:auto_generated|ram_block1a14
+Warning (13012): Latch mips_memory:Cash|read_data[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal instruction_memory:InstMem|altsyncram:instructions_rtl_0|altsyncram_ca81:auto_generated|ram_block1a14
+Warning (13012): Latch mips_memory:Cash|read_data[31] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal instruction_memory:InstMem|altsyncram:instructions_rtl_0|altsyncram_ca81:auto_generated|ram_block1a14
+Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/teslim/1901042697/1901042697_restored/output_files/project03.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 15159 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 33 input pins
+    Info (21059): Implemented 64 output pins
+    Info (21061): Implemented 15046 logic cells
+    Info (21064): Implemented 16 RAM segments
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 79 warnings
+    Info: Peak virtual memory: 4726 megabytes
+    Info: Processing ended: Sun Jan 09 17:43:27 2022
+    Info: Elapsed time: 00:00:56
+    Info: Total CPU time (on all processors): 00:00:53
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/teslim/1901042697/1901042697_restored/output_files/project03.map.smsg.
+
+

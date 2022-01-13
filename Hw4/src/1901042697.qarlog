@@ -1,0 +1,63 @@
+Quartus II Archive log --	C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/teslim/1901042697.qarlog
+
+Archive:	C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/teslim/1901042697.qar
+Date:		Sat Jan 08 12:37:58 2022
+Quartus II 64-Bit		13.1.0 Build 162 10/23/2013 SJ Web Edition
+
+	=========== Files Selected: ===========
+C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/hw4/DraftForHW4_restored/ALU.v
+C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/hw4/DraftForHW4_restored/MiniMIPS.v
+C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/hw4/DraftForHW4_restored/MiniMIPS_testbench.v
+C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/hw4/DraftForHW4_restored/alu_32bit.v
+C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/hw4/DraftForHW4_restored/alu_32bit_testbench.v
+C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/hw4/DraftForHW4_restored/alu_control.v
+C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/hw4/DraftForHW4_restored/alu_control_testbench.v
+C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/hw4/DraftForHW4_restored/assignment_defaults.qdf
+C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/hw4/DraftForHW4_restored/branch_module.v
+C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/hw4/DraftForHW4_restored/branch_module_testbrench.v
+C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/hw4/DraftForHW4_restored/db/project03.db_info
+C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/hw4/DraftForHW4_restored/incremental_db/compiled_partitions/project03.db_info
+C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/hw4/DraftForHW4_restored/instruction_decode.v
+C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/hw4/DraftForHW4_restored/instruction_decode_testbrench.v
+C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/hw4/DraftForHW4_restored/instruction_memory.v
+C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/hw4/DraftForHW4_restored/instruction_memory_testbench.v
+C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/hw4/DraftForHW4_restored/main_control.v
+C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/hw4/DraftForHW4_restored/main_control_testbench.v
+C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/hw4/DraftForHW4_restored/mips_memory.v
+C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/hw4/DraftForHW4_restored/mips_memory_testbench.v
+C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/hw4/DraftForHW4_restored/mips_registers.v
+C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/hw4/DraftForHW4_restored/mips_registers_testbench.v
+C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/hw4/DraftForHW4_restored/mostALU.v
+C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/hw4/DraftForHW4_restored/mux_2x1.v
+C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/hw4/DraftForHW4_restored/mux_2x1_32bit.v
+C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/hw4/DraftForHW4_restored/mux_2x1_32bit_testbech.v
+C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/hw4/DraftForHW4_restored/mux_2x1_testbench.v
+C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/hw4/DraftForHW4_restored/mux_4x1.v
+C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/hw4/DraftForHW4_restored/mux_4x1_testbench.v
+C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/hw4/DraftForHW4_restored/mux_8x1.v
+C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/hw4/DraftForHW4_restored/mux_8x1_testbench.v
+C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/hw4/DraftForHW4_restored/onebitALU.v
+C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/hw4/DraftForHW4_restored/onebitALU_testbench.v
+C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/hw4/DraftForHW4_restored/project03.qpf
+C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/hw4/DraftForHW4_restored/project03.qsf
+C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/hw4/DraftForHW4_restored/register_testbench2.v
+C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/hw4/DraftForHW4_restored/shiftLeft2.v
+C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/hw4/DraftForHW4_restored/signExtend.v
+C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/hw4/DraftForHW4_restored/signExtend_testbench.v
+C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/hw4/DraftForHW4_restored/simulation/modelsim/data.txt
+C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/hw4/DraftForHW4_restored/simulation/modelsim/instructionList.txt
+C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/hw4/DraftForHW4_restored/simulation/modelsim/registers.mem
+C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/hw4/DraftForHW4_restored/twoBitALU.v
+C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/hw4/DraftForHW4_restored/twoBitALU_testbench.v
+C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/hw4/DraftForHW4_restored/zero_extend.v
+C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/hw4/DraftForHW4_restored/zero_extend_testbrench.v
+	======= Total: 46 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Sun Jan 09 17:42:09 2022
+Source archive file:	C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/teslim/1901042697/1901042697.qar
+Archive was extracted into	C:/Users/M Bedir ULUCAY/Desktop/Organizasyon/hws/teslim/1901042697/1901042697_restored/
+		 - successfully.
